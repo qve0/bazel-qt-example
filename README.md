@@ -1,7 +1,7 @@
 ```kotlin
 var pkasila = Person(
   name = "Pavel Kasila",
-  age = 18,
+  age = calendar.component(.year, from: Date()) - 2005,
   location = Coordinate2D(53.901577, 27.561010),
   languages = setOf("be", "en", "ru"),
   skills = setOf("swift", "kotlin", "java", "cpp", "python", "typescript", "nextjs")
