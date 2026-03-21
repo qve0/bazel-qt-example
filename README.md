@@ -1,24 +1,12 @@
-```kotlin
-var pkasila = Person(
-  name = "Pavel Kasila",
-  age = calendar.component(.year, from: Date()) - 2005,
-  location = Coordinate2D(53.901577, 27.561010),
-  languages = setOf("be", "en", "ru"),
-  skills = setOf("swift", "kotlin", "java", "cpp", "python", "typescript", "nextjs")
-)
+## Лабораторная работа 1, задание 2: Студенческий планировщик
 
-pkasila.hi()
+## Описание
+Это приложение для управления списком учебных задач. Суть в чём: просто выбираете дату, пишите название учебной задачи и выбирайте приоритет дедлайна.
 
-// Prints out: Hey! Nice to see you there 😊
-```
-
-- 💬 There are some [personal projects](https://github.com/pkasila?tab=repositories) you may ask me about
-- 📫 How to reach me:
-  - ✉️ Mail: [pavel.kasila@gmail.com](mailto:pavel.kasila@gmail.com)
-  - Telegram: [@pavelkasila](https://t.me/pavelkasila)
-- 😄 Pronouns: he/him/his
-
-## Donate
-
-- Bitcoin: `bc1qnfdswn3ttggkeqdurzmf8kydystynwr7892ym0`
-- Monero: `8AGCLDTvGtjVdKz1nNuN7UiReCsvjEK3BdhQREkyt5RQ9B9rE6fhgcv4LfSEHSn9ayiKdt5cue892ATGmv7Ljva2VpVz2Lp`
+## Использованные виджеты
+1. QLineEdit — ввод названия задачи (сигнал `textChanged`).
+2. QDateEdit — выбор даты дедлайна (сигнал `dateChanged`).
+3. QComboBox — выбор приоритета задачи.
+4. QPushButton — добавление задачи в список (сигнал `clicked`).
+5. QListWidget — отображение списка задач с цветовой индикацией.
+6. QCalendarWidget — наглядный выбор даты (сигнал `clicked`).
