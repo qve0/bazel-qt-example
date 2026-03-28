@@ -1,0 +1,9 @@
+build --config=macos
+
+build:macos --cxxopt=-std=c++20
+build:macos --linkopt=-headerpad_max_install_names
+
+# Отключаем проверку версий зависимостей
+common --check_direct_dependencies=off
+
+build --disk_cache=~/.bazel_disk_cache

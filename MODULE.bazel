@@ -1,0 +1,16 @@
+module(name = "bazel_qt_example", version = "0.1.0")
+
+bazel_dep(name = "rules_qt", version = "0.0.6")
+bazel_dep(name = "platforms", version = "0.0.10")
+bazel_dep(name = "rules_cc", version = "0.1.1")
+
+qt = use_extension("@rules_qt//extension:qt.bzl", "fetch")
+
+qt.install(
+    name = "qt_mac_aarch64",
+    build_file = "@rules_qt//extension:qt/6.8.3/mac_aarch64.BUILD", # Та самая спасительная строка!
+    os = "macos",
+    version = "6.8.3",
+)
+
+use_repo(qt, "qt_mac_aarch64")
